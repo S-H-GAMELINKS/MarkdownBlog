@@ -1,32 +1,32 @@
 class Api::PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
-  # GET /posts
-  # GET /posts.json
+  # GET /api/posts
+  # GET /api/posts.json
   def index
     @posts = Post.all
     render json: @posts
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
+  # GET /api/posts/1
+  # GET /api/posts/1.json
   def show
     render json: @post
   end
 
-  # GET /posts/new
+  # GET /api/posts/new
   def new
     @post = Post.new
     render json: @post
   end
 
-  # GET /posts/1/edit
+  # GET /api/posts/1/edit
   def edit
     render json: @post
   end
 
-  # POST /posts
-  # POST /posts.json
+  # POST /api/posts
+  # POST /api/posts.json
   def create
     @post = Post.new(post_params)
     
@@ -37,8 +37,8 @@ class Api::PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
+  # PATCH/PUT /api/posts/1
+  # PATCH/PUT /api/posts/1.json
   def update
     if @post.update(post_params)
       render json: @post
@@ -47,8 +47,8 @@ class Api::PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
+  # DELETE /api/posts/1
+  # DELETE /api/posts/1.json
   def destroy
     render json: @post.destroy
   end
