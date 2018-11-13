@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   root 'web#index'
+
+  get '/about',   to: 'web#index'
+  get '/contact',   to: 'web#index'
+  get '/blogs', to: 'web#index'
+
   resources :posts
 
   namespace :api, format: 'json' do
