@@ -22,6 +22,7 @@ class Api::PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    render json: @post
   end
 
   # POST /posts
