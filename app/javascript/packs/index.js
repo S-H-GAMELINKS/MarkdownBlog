@@ -8,9 +8,4 @@ const app = new Vue({
     components: {
         'nav-bar': Header
     },
-    data: function() {
-        return {
-            message: "Welcome to Markdown Blog App!"
-        }
-    }
 })
