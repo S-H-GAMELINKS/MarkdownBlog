@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <label>Title: {{title}} </label>
+        <p><h1>Title: {{title}} </h1></p>
 
-        <label>Content</label>
-        {{content}}
+        <p><h2>Content</h2></p>
+        <p>{{content}}</p>
     </div>
 </template>
 
