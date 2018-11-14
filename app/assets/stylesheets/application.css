@@ -12,5 +12,6 @@
  *
  *= require_tree .
  *= require bootstrap-umi/dist/css/bootstrap
+ *= require highlight.js/styles/default.css
  *= require_self
  */

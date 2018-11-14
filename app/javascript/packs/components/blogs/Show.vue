@@ -3,12 +3,13 @@
         <p><h1>Title: {{title}} </h1></p>
 
         <p><h2>Content</h2></p>
-        <p>{{content}}</p>
+        <vue-simple-markdown :source="content" v-highlight>{{content}}</vue-simple-markdown>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
+import { VueSimpleMarkdown } from 'vue-simple-markdown';
 
 export default {
     data: function() {
@@ -16,6 +17,9 @@ export default {
             title: "",
             content: ""
         }
+    },
+    components: {
+        'vue-simple-markdown': VueSimpleMarkdown
     },
     mounted: function() {
         this.getPost();
@@ -26,7 +30,7 @@ export default {
 
             axios.get('/api/posts/' + id).then((response) => {
                 this.title = response.data.title;
-                this.content = response.data.title;
+                this.content = response.data.content;
             }, (error) => {
                 alert(error);
             })
