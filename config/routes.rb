@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/about',   to: 'web#index'
   get '/contact',   to: 'web#index'
   get '/blogs', to: 'web#index'
+  get '/blogs/new', to: 'web#index'
 
   resources :posts
 

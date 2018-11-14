@@ -11,6 +11,7 @@
                     <router-link to="/about" class="dropdown-item">About</router-link>
                     <router-link to="/contact" class="dropdown-item">Contact</router-link>
                     <router-link to="/blogs" class="dropdown-item">Blogs</router-link>
+                    <router-link to="/blogs/new" class="dropdown-item">New Post</router-link>
                 </div>
             </div>
         </nav>
