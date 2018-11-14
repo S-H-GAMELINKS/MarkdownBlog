@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/contact',   to: 'web#index'
   get '/blogs', to: 'web#index'
   get '/blogs/new', to: 'web#index'
+  get '/blogs/:id', to: 'web#index'
 
   resources :posts
 

@@ -5,6 +5,7 @@ import About from '../components/web/About.vue';
 import Contact from '../components/web/Contact.vue';
 import Blogs from '../components/blogs/Index.vue';
 import New from '../components/blogs/New.vue';
+import Show from '../components/blogs/Show.vue';
 
 Vue.use(VueRouter)
 
@@ -16,5 +17,6 @@ export default new VueRouter({
     { path: '/contact', component: Contact },
     { path: '/blogs', component: Blogs },
     { path: '/blogs/new', component: New },
+    { name: 'show', path: '/blogs/:id', component: Show },
   ],
 })
