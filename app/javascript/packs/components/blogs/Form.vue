@@ -19,6 +19,7 @@
 
 <script>
 import axios from 'axios';
+import router from '../../router/router';
 
 export default {
     data: function() {
@@ -61,6 +62,7 @@ export default {
 
             axios.post('/api/posts', {post: {title: this.title, content: this.content}}).then((response) => {
                 alert("Success!");
+                router.push({path: '/blogs'});
             }, (error) => {
                 alert(error);
             })
@@ -73,6 +75,7 @@ export default {
 
             axios.put('/api/posts/' + id, {post: {title: this.title, content: this.content}}).then((response) => {
                 alert("Success!");
+                router.push({path: '/blogs'});
             }, (error) => {
                 alert(error);
             })
